@@ -33,8 +33,8 @@ class MainActivity : ComponentActivity() {
 
 data class Topic(
     @StringRes val nameResourceId: Int,
+    val courseCount: Int,
     @DrawableRes val imageResourceId: Int,
-    val courseCount: Int
 )
 
 @Composable
