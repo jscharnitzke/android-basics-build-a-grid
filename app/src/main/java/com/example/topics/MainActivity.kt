@@ -3,6 +3,8 @@ package com.example.topics
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.annotation.DrawableRes
+import androidx.annotation.StringRes
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -28,6 +30,12 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
+
+data class Topic(
+    @StringRes val nameResourceId: Int,
+    @DrawableRes val imageResourceId: Int,
+    val courseCount: Int
+)
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
